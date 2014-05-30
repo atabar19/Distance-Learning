@@ -1,33 +1,22 @@
 var express = require('express');
 var app = express();
 
-var mongo = require('./routes/mongo.js')
+var mongo = require('./routes/mongo.js');
 
-/*
-app.get('/Main', function(req, res){
-	res.sendfile(__dirname + '/Main/presentation.html');
-});
-app.get('/Main/js/switch.js', function(req, res){
-	res.sendfile(__dirname + '/Main/js/switch.js');
+app.get('/', function(req, res){
+	res.sendfile(__dirname + '/LogAdmin.html');
 })
-app.get('/Main/js/1stCamera.js', function(req, res){
-	res.sendfile(__dirname + '/Main/js/1stCamera.js');
-})
-app.get('/Main/js/2ndCamera.js', function(req, res){
-	res.sendfile(__dirname + '/Main/js/2ndCamera.js');
-})
-app.get('/Main/js/jquery-1.10.2.min.js', function(req, res){
-	res.sendfile(__dirname + '/Main/js/jquery-1.10.2.min.js');
-})
-app.get('/Main/js/bootstrap.min.js', function(req, res){
-	res.sendfile(__dirname + '/Main/js/bootstrap.min.js');
-})*/
 
-app.get('/test', function(req, res){
-	res.sendfile(__dirname + '/views/test.html');
+app.get('/MainAdmin', function(req, res){
+	res.sendfile(__dirname + '/MainAdmin.html');
 })
-app.get('/routes/lol.js', function(req, res){
-	res.sendfile(__dirname + '/routes/lol.js');
+
+app.get('/AdminEditVid', function(req, res){
+	res.sendfile(__dirname + '/AdminEditVid.html');
+})
+
+app.get('/profile', function(req, res){
+	res.sendfile(__dirname + '/profile.html');
 })
 
 app.get('*', function(req, res){
